@@ -1,0 +1,181 @@
+/* ----- HERO HEADER ----- */
+
+.header {
+    background-color: transparent;
+    color: #ededed;
+    /*Vincular el scroll a la animación*/
+    animation: adapt-nav both;
+    animation-timeline: scroll();  
+    animation-range: 0px 30px;
+}
+
+
+
+/* -------- HERO SECTION ------- */
+.hero-section {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(255,255,255,0.1)), url('../img/lobby-tmsm.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.hero-section__text-container {
+    text-wrap: pretty;
+    width:60%;
+    min-height: 50%;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+.hero-title {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0.4rem 0;
+}
+
+
+.hero-section__buttons {
+    display: flex;
+    width: 50%;
+    gap: 1em;
+}
+
+.hero-section__buttons .hero-button {
+    width: 30%;
+    border-radius:20px;
+    background-color: var(--main-green);
+    padding: 10px 20px;
+    color: #ededed;
+}
+
+/* ---- Main Content ----- */
+
+section {
+    padding:5em 7.5%;
+    width:100%;
+}
+
+.main section:nth-child(2n) {
+    background-color: var(--light-gray);
+}
+
+.main {
+    width: 100%;
+}
+
+.main .main__stats{
+    display: flex;
+    gap: 3em;
+    justify-content: center;
+}
+
+.main__stats .stat {
+    text-align: center;
+}
+
+.stat-icon {
+    margin: auto;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background-color: #9e9a9aaa;
+}
+
+.stat .stat-title {
+    margin: 0.2em 0;
+    font-weight: 500;
+}
+
+/*--CONTAINER QUERY--*/
+
+
+
+/* -----SECTION ------*/
+.main__vision {
+    display: flex;
+    min-height: 90vh;
+    justify-content: space-evenly;
+}
+
+.main__vision .vision__img{
+    flex-basis: 40%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main__vision .vision__img img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 7px;
+}
+
+.vision__description {
+    flex-basis: 50%;
+    place-content: center;
+    text-wrap: pretty;
+    white-space: pre-line;
+}
+
+.main__vision .label-important {
+    color: var(--main-green)
+}
+
+/* ---- GRID SERVICES ---- */
+.main__services > h2, .vision__description > h2 {
+    letter-spacing: 0.05em;
+    font-size: 2rem;
+    color: var(--main-green);
+}
+
+.main__services .services__grid{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width:100%;
+    min-height: 80vh;
+}
+
+.services__cell {
+    background-color: var(--light-gray);
+    color: var(--white);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    background-position: center;
+    background-size: cover;
+    padding:2em;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services__cell h2 {
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+
+.services__cell:hover {
+    transform: scale(1.005);
+    opacity: 0.9;
+}
+
+.services__cell:first-child {
+    place-content: end;
+    grid-row: span 2;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(255,255,255,0.1)), url('../img/lobby-tmsm.jpg');
+}
+
+.services__cell:nth-child(2){
+    place-content: center;
+    background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(255,255,255,0.1)), url('../img/tmsm-out.jpg');
+}
+
+.services__cell:nth-child(3) {
+    place-content: center;
+    background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(255,255,255,0.1)), url('../img/tmsm-out.jpg');
+} 

@@ -1,0 +1,17 @@
+.hero-section {
+    height: 70vh;
+    background-color: var(--light-gray);
+    border:3px solid red;
+    padding: 3em;
+    align-items: center;
+    display: flex;
+}
+
+.hero-section__text-container {
+    font-size: 1.3em;
+}
+
+.hero-section__img-container, .hero-section__text-container {
+    flex: 1;
+    border: 3px solid red;
+}

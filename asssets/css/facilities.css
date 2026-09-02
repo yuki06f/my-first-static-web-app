@@ -1,0 +1,152 @@
+.main {
+    margin-top: 10vh;
+    padding:5em 5%;
+    width:100%;
+}
+
+.main__description {
+    margin-bottom: 4rem;
+}
+
+.main__grid {
+    height: 120vh;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.grid__cell {
+    position: relative;
+    overflow: hidden;
+    border-radius: 7px;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+
+    isolation: isolate;
+    transform: translateZ(0);
+}
+
+.cell__img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.cell__img img {
+    object-fit: cover;
+    object-position: center;
+    transform-origin: center center;
+    transition: transform 0.4s ease;
+    width: 100%;
+    height: 100%;
+    display: block;
+    backface-visibility: hidden;
+    transform: scale(1) translateZ(0);
+}
+
+.grid__cell::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(0deg,rgba(26, 68, 41, 0.94) 0%,rgba(36, 85, 52, 0.75) 20%,rgba(43, 101, 60, 0.35) 38%,transparent 55%);
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.grid__cell .cell__text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 2em;
+    z-index: 2;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.cell__title {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.grid__cell:nth-child(4) {
+    grid-column: span 2;
+}
+
+.grid__cell:hover .cell__img img {
+    transform: scale(1.06) translateZ(0);
+}
+
+.grid__cell:hover::after {
+    opacity: 1;
+}
+
+.grid__cell:hover .cell__text {
+    opacity: 1;
+}
+
+
+/* ----- SECTION INFO ------- */ 
+
+.about {
+    margin-top: 8rem;
+    width: 100%;
+    height:100vh;
+}
+
+.about .about__card {
+    width: 92%;
+    height: 75%;
+    background-color: var(--light-gray);
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    gap: 1rem;
+}
+
+.card__content {
+    flex: 2;
+    height: 90%;
+    padding-right: 2em;
+    align-content: center;
+}
+
+.card__img {
+    flex: 1;
+    height: 90%;
+}
+
+.card__title {
+    font-size: 2em;
+    letter-spacing: 0.03em;
+    margin-bottom: 1em;
+}
+
+.card__content p {
+    text-align: pretty;
+}
+
+.card__content .card__list {
+    list-style-type: none;
+    margin-top: 1.5em;
+}
+
+
+.card__content .card__img {
+    width: 100%;
+    height: 100%;
+}
+
+.card__img img {
+    border-radius: 100%;
+
+}
