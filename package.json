@@ -1,7 +1,9 @@
 {
-  "name": "vanilla-basic",
+  "name": "mi-prueba-web",
   "version": "1.0.0",
-  "scripts": { 
-    "start": "sirv ./src public --cors --single --no-clear --port 8000"
+  "description": "Prueba de Azure App Service",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
   }
 }
